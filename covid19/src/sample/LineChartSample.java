@@ -5,16 +5,14 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 
 public class LineChartSample {
 
-    public void initLineChartSample(Stage primaryStage) {
-        display(primaryStage);
-    }
-
-    public void display(Stage stage) {
+    public void display(checkData checkpage, Stage stage) {
         stage.setTitle("Line Chart Sample");
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
@@ -35,7 +33,29 @@ public class LineChartSample {
         series1.getData().add(new XYChart.Data("6", 2000));
         series1.getData().add(new XYChart.Data("7", 4000));
 
-        Scene scene  = new Scene(lineChart,1334,750);
+        Button b1 = new Button();
+        b1.setText("< Back");
+        b1.setOnAction(e -> checkpage.start(stage));
+
+        Button b2 = new Button();
+        b2.setText("By Regions");
+        BubbleChartSample initScreen2 = new BubbleChartSample();
+        b2.setOnAction(e -> initScreen2.display(checkpage, stage));
+
+        Button b3 = new Button();
+        b3.setText("Simulation");
+
+
+        BorderPane layout = new BorderPane();
+        VBox group = new VBox(40);
+        group.getChildren().addAll(b1, b2, b3);
+
+        layout.setLeft(group);
+        layout.setCenter(lineChart);
+
+        Scene scene  = new Scene(layout,1334,750);
+        scene.getStylesheets().addAll(this.getClass().getResource(
+                "checkData.css").toExternalForm());
         lineChart.getData().add(series1);
 
         stage.setScene(scene);

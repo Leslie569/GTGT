@@ -32,17 +32,17 @@ public class checkData extends Application  {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         primaryStage.setTitle("CheckData");
         b1 = new Button();
         b1.setText("National Total");
         LineChartSample initScreen1 = new LineChartSample();
-        b1.setOnAction(e -> initScreen1.initLineChartSample(primaryStage));
+        b1.setOnAction(e -> initScreen1.display(this, primaryStage));
 
         b2 = new Button();
         b2.setText("By Regions");
         BubbleChartSample initScreen2 = new BubbleChartSample();
-        b2.setOnAction(e -> initScreen2.initBubbleChartSample(primaryStage));
+        b2.setOnAction(e -> initScreen2.display(this, primaryStage));
 
         b3 = new Button();
         b3.setText("Simulation");
@@ -51,7 +51,7 @@ public class checkData extends Application  {
 
         HBox layout = new HBox(40);
         layout.setAlignment(Pos.CENTER);
-        layout.setId("pane");
+        layout.setStyle("-fx-background-color: #FFC0CB");
         layout.getChildren().addAll(b1, b2, b3);
 
         Scene scene = new Scene(layout, 1334, 750);
