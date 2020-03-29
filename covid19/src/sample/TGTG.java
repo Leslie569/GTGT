@@ -1,3 +1,5 @@
+package sample;
+
 import javafx.application.Application;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -9,9 +11,12 @@ import javafx.scene.image.ImageView;
 public class TGTG extends Application{
     Scene letter, mainPage;
 
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws Exception{
         //Welcome screen
         Image imag1 = new Image(getClass().getResourceAsStream("start_button.jpg"));
         Image imag2 = new Image(getClass().getResourceAsStream("sound_button.jpg"));
