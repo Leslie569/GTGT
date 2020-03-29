@@ -1,6 +1,6 @@
-//package sample;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.scene.text.Text;
@@ -11,23 +11,20 @@ import javafx.scene.image.ImageView;
 public class TGTG extends Application{
     Scene letter, mainPage;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Welcome screen
-        Image imag1 = new Image(getClass().getResourceAsStream("start_button.jpg"));
-        Image imag2 = new Image(getClass().getResourceAsStream("sound_button.jpg"));
+        Image imag1 = new Image(getClass().getResourceAsStream("start_button.png"));
+        Image imag2 = new Image(getClass().getResourceAsStream("sound_button.png"));
         Image imag3 = new Image(getClass().getResourceAsStream("start_background.jpg"));
         Image imag4 = new Image(getClass().getResourceAsStream("letter.jpg"));
         Image imag5 = new Image(getClass().getResourceAsStream("letter_background.jpg"));
-        Image imag6 = new Image(getClass().getResourceAsStream("continue.jpg"));
-        Image imag7 = new Image(getClass().getResourceAsStream("mainScene.jpg"));
-        Image imag8 = new Image(getClass().getResourceAsStream("state_ranking.jpg"));
-        Image imag9 = new Image(getClass().getResourceAsStream("duel.jpg"));
-        Image imag10 = new Image(getClass().getResourceAsStream("data_center.jpg"));
+        Image imag6 = new Image(getClass().getResourceAsStream("continue.png"));
+        Image imag7 = new Image(getClass().getResourceAsStream("main_scene.jpg"));
+        Image imag8 = new Image(getClass().getResourceAsStream("state_ranking.png"));
+        Image imag9 = new Image(getClass().getResourceAsStream("duel.png"));
+        Image imag10 = new Image(getClass().getResourceAsStream("info_center.png"));
         Image imag11 = new Image(getClass().getResourceAsStream("npc.jpg"));
         Image imag12 = new Image(getClass().getResourceAsStream("plot_description.jpg"));
         Image imag13 = new Image(getClass().getResourceAsStream("choice.jpg"));
@@ -35,21 +32,70 @@ public class TGTG extends Application{
 
 
         Button begin = new Button("", new ImageView(imag1));
-        begin.setOnAction(e -> primaryStage.setScene(letter));// transfer to introduction letter
+        begin.setStyle(
+                "-fx-border-color: transparent;" +
+                        "-fx-border-width: 0;" +
+                        "-fx-background-radius: 0;" +
+                        "-fx-background-color: transparent;"
+        );
         Button sound = new Button("", new ImageView(imag2));
+        sound.setStyle(
+                "-fx-background-radius: 10em; " +
+                        "-fx-min-width: 20px; " +
+                        "-fx-min-height: 20px; " +
+                        "-fx-max-width: 20px; " +
+                        "-fx-max-height: 20px;"
+        );
         Button con = new Button("", new ImageView(imag6));
-        con.setOnAction(e -> primaryStage.setScene(mainPage));// transfer to main storyline module
+        con.setStyle(
+                "-fx-border-color: transparent;" +
+                        "-fx-border-width: 0;" +
+                        "-fx-background-radius: 0;" +
+                        "-fx-background-color: transparent;"
+        );
         Button ranking = new Button("", new ImageView(imag8));
         Button duel = new Button("", new ImageView(imag9));
         Button data = new Button("", new ImageView(imag10));
-        Button c1 = new Button("", new ImageView(imag13));
-        c1.setPrefSize(600,100);
-        Button c2 = new Button("", new ImageView(imag13));
-        c2.setPrefSize(600,100);
-        Button c3 = new Button("", new ImageView(imag13));
-        c3.setPrefSize(600,100);
-        Button c4 = new Button("", new ImageView(imag13));
-        c4.setPrefSize(600,100);
+        ImageView choice1 = new ImageView(imag13);
+        choice1.setFitHeight(100);
+        choice1.setFitWidth(200);
+        Button c1 = new Button("", choice1);
+        c1.setStyle(
+                "-fx-border-color: transparent;" +
+                        "-fx-border-width: 0;" +
+                        "-fx-background-radius: 0;" +
+                        "-fx-background-color: transparent;"
+        );
+        ImageView choice2 = new ImageView(imag13);
+        choice2.setFitHeight(100);
+        choice2.setFitWidth(200);
+        Button c2 = new Button("", choice2);
+        c2.setStyle(
+                "-fx-border-color: transparent;" +
+                        "-fx-border-width: 0;" +
+                        "-fx-background-radius: 0;" +
+                        "-fx-background-color: transparent;"
+        );
+        ImageView choice3 = new ImageView(imag13);
+        choice3.setFitHeight(100);
+        choice3.setFitWidth(200);
+        Button c3 = new Button("", choice3);
+        c3.setStyle(
+                "-fx-border-color: transparent;" +
+                        "-fx-border-width: 0;" +
+                        "-fx-background-radius: 0;" +
+                        "-fx-background-color: transparent;"
+        );
+        ImageView choice4 = new ImageView(imag13);
+        choice4.setFitHeight(100);
+        choice4.setFitWidth(200);
+        Button c4 = new Button("", choice4);
+        c4.setStyle(
+                "-fx-border-color: transparent;" +
+                        "-fx-border-width: 0;" +
+                        "-fx-background-radius: 0;" +
+                        "-fx-background-color: transparent;"
+        );
 
 
         BackgroundImage welcomeBackground = new BackgroundImage(imag3,
@@ -71,15 +117,24 @@ public class TGTG extends Application{
                 BackgroundSize.DEFAULT);
         Background b3 = new Background(mainBackground);
 
-
+        //welcome scene
         VBox v = new VBox();
+        v.setSpacing(20);
         v.setBackground(b1);
+        v.getChildren().addAll(begin);
+        v.getChildren().add(sound);
 
-        StackPane sp = new StackPane();
-        sp.getChildren().add(new ImageView(imag4));
-        sp.setBackground(b2);
+        //letter
+        BorderPane bp1 = new BorderPane();
+        HBox h2 = new HBox();
+        h2.getChildren().add(con);
+        bp1.setBottom(h2);
+        bp1.setCenter(new ImageView(imag4));
+        bp1.setBackground(b2);
 
-        BorderPane bp = new BorderPane();
+
+        //main scene
+        BorderPane bp2 = new BorderPane();
         HBox h1 = new HBox();
         VBox v2 = new VBox();
         v2.getChildren().add(c1);
@@ -88,18 +143,25 @@ public class TGTG extends Application{
         v2.getChildren().add(c4);
         h1.getChildren().add(new ImageView(imag11));
         h1.getChildren().add(v2);
-        bp.setBottom(new ImageView(imag12));
-        bp.setCenter(h1);
-        bp.setBackground(b3);
+        ImageView textBox = new ImageView(imag12);
+        bp2.setCenter(h1);
+        bp2.setBottom(textBox);
+        bp2.setAlignment(textBox, Pos.CENTER);
+        bp2.setBackground(b3);
 
 
         Scene welcome = new Scene(v, 1334, 750);
-        Scene letter = new Scene(sp,1334,750);
-        Scene mainPage = new Scene(bp, 1334, 750);
+        Scene letter = new Scene(bp1,1334,750);
+        begin.setOnAction(e -> primaryStage.setScene(letter));// transfer to introduction letter
+        Scene mainPage = new Scene(bp2, 1334, 750);
+        con.setOnAction(e -> primaryStage.setScene(mainPage));// transfer to main storyline module
 
 
         primaryStage.setScene(welcome);
         primaryStage.show();
     }
 
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
