@@ -1,0 +1,16 @@
+#pane { /* by ID*/
+    -fx-background-image: url("pink.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+
+.button{ /* All buttons*/
+    -fx-background-color: #AB4642;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 4;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 200px;
+}
