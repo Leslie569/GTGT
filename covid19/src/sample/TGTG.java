@@ -1,3 +1,4 @@
+package sample;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -30,15 +31,19 @@ public class TGTG extends Application{
         Image imag13 = new Image(getClass().getResourceAsStream("choice.jpg"));
 
 
-
         Button begin = new Button("", new ImageView(imag1));
+        begin.setLayoutX(250);
+        begin.setLayoutY(220);
         begin.setStyle(
                 "-fx-border-color: transparent;" +
                         "-fx-border-width: 0;" +
                         "-fx-background-radius: 0;" +
                         "-fx-background-color: transparent;"
         );
+
         Button sound = new Button("", new ImageView(imag2));
+        sound.setLayoutX(1000);
+        sound.setLayoutY(600);
         sound.setStyle(
                 "-fx-background-radius: 10em; " +
                         "-fx-min-width: 20px; " +
