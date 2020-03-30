@@ -29,8 +29,9 @@ import javafx.stage.Stage;
 
 public class Controller {
 
+    @FXML
     public void startButtonAction(ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("letter.fxml"));
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("letterpage.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
         //This line gets the Stage information
@@ -38,6 +39,10 @@ public class Controller {
 
         window.setScene(tableViewScene);
         window.show();
+    }
+
+    private void test(ActionEvent event) {
+        System.out.println("success");
     }
 }
 

@@ -12,7 +12,6 @@ import javafx.scene.image.ImageView;
 public class TGTG extends Application{
     Scene letter, mainPage;
 
-
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Welcome screen
@@ -32,8 +31,6 @@ public class TGTG extends Application{
 
 
         Button begin = new Button("", new ImageView(imag1));
-        begin.setLayoutX(250);
-        begin.setLayoutY(220);
         begin.setStyle(
                 "-fx-border-color: transparent;" +
                         "-fx-border-width: 0;" +
@@ -42,8 +39,6 @@ public class TGTG extends Application{
         );
 
         Button sound = new Button("", new ImageView(imag2));
-        sound.setLayoutX(1000);
-        sound.setLayoutY(600);
         sound.setStyle(
                 "-fx-background-radius: 10em; " +
                         "-fx-min-width: 20px; " +
