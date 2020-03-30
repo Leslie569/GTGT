@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1334.0">
+         <image>
+            <Image url="@farm2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="395.0" fitWidth="265.0" layoutX="52.0" layoutY="216.0">
+         <image>
+            <Image url="@npc.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1006.0" layoutY="28.0">
+         <image>
+            <Image url="@state_ranking.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1121.0" layoutY="28.0">
+         <image>
+            <Image url="@duel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1233.0" layoutY="28.0">
+         <image>
+            <Image url="@info_center.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="600.0" layoutX="426.0" layoutY="126.0">
+         <image>
+            <Image url="@q2-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="600.0" layoutX="426.0" layoutY="353.0">
+         <image>
+            <Image url="@q2-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="600.0" layoutX="426.0" layoutY="212.0">
+         <image>
+            <Image url="@q2-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="1000.0" layoutX="231.0" layoutY="528.0">
+         <image>
+            <Image url="@q2.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="440.0" layoutY="220.0" mnemonicParsing="false" onAction="#s1ButtonAction" opacity="0.0" prefHeight="100.0" prefWidth="600.0" text="Button" />
+      <Button layoutX="441.0" layoutY="132.0" mnemonicParsing="false" onAction="#loseButtonAction" opacity="0.0" prefHeight="49.0" prefWidth="573.0" text="Button" />
+   </children>
+</AnchorPane>

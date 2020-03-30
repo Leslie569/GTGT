@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.chart.BubbleChart;
 import javafx.scene.control.*;
@@ -48,8 +49,13 @@ public class BubbleChartSample {
         VBox group = new VBox(40);
         group.getChildren().addAll(b1, b2, b3);
 
+        StackPane hbox = new StackPane();
+        hbox.setMaxSize(1100, 750);
+        hbox.setId("pane");
+        hbox.getChildren().add(bubbleChart);
+
         layout.setLeft(group);
-        layout.setCenter(bubbleChart);
+        layout.setCenter(hbox);
 
         Scene scene  = new Scene(layout,1334,750);
         scene.getStylesheets().addAll(this.getClass().getResource(

@@ -5,7 +5,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
@@ -18,11 +17,11 @@
             <Image url="@letter.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="154.0" fitWidth="510.0" layoutX="436.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="154.0" fitWidth="510.0" layoutX="797.0" layoutY="603.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@continue.png" />
          </image>
       </ImageView>
-      <Button layoutX="374.0" layoutY="591.0" mnemonicParsing="false" onAction="#startButtonAction" opacity="0.0" prefHeight="106.0" prefWidth="631.0" text="Button" />
+      <Button layoutX="689.0" layoutY="600.0" mnemonicParsing="false" onAction="#conButtonAction" opacity="0.0" prefHeight="106.0" prefWidth="631.0" text="Button" />
    </children>
 </AnchorPane>

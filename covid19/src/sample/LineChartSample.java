@@ -23,8 +23,7 @@ public class LineChartSample {
         lineChart.setTitle("Cases vs Time");
         //Region r = ;
         XYChart.Series series1 = new XYChart.Series();
-        series1.setName("National cases");
-
+        series1.setName("Confirmed cases");
         series1.getData().add(new XYChart.Data("1", 80));
         series1.getData().add(new XYChart.Data("2", 100));
         series1.getData().add(new XYChart.Data("3", 200));
@@ -32,6 +31,16 @@ public class LineChartSample {
         series1.getData().add(new XYChart.Data("5", 1000));
         series1.getData().add(new XYChart.Data("6", 2000));
         series1.getData().add(new XYChart.Data("7", 4000));
+
+        XYChart.Series series2 = new XYChart.Series();
+        series2.setName("Death");
+        series2.getData().add(new XYChart.Data("1", 1));
+        series2.getData().add(new XYChart.Data("2", 3));
+        series2.getData().add(new XYChart.Data("3", 6));
+        series2.getData().add(new XYChart.Data("4", 10));
+        series2.getData().add(new XYChart.Data("5", 30));
+        series2.getData().add(new XYChart.Data("6", 50));
+        series2.getData().add(new XYChart.Data("7", 100));
 
         Button b1 = new Button();
         b1.setText("< Back");
@@ -56,7 +65,7 @@ public class LineChartSample {
         Scene scene  = new Scene(layout,1334,750);
         scene.getStylesheets().addAll(this.getClass().getResource(
                 "checkData.css").toExternalForm());
-        lineChart.getData().add(series1);
+        lineChart.getData().addAll(series1, series2);
 
         stage.setScene(scene);
         stage.show();

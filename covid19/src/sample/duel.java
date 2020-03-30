@@ -17,13 +17,17 @@ public class Duel {
         //Block events to other windows
         window.initModality(Modality.APPLICATION_MODAL);
         window.setMinWidth(800);
-        window.setMinHeight(500);
+        window.setMinHeight(600);
 
         //scene
         Label label = new Label();
-        label.setText("Time for Duel! Select a state you wanna have a duel with. \n 5 minutes later, you will" +
+        label.setText("Time for Duel! Select a state you wanna have a duel with. \n A few seconds later, you will" +
                 " battle with the state with the most votes. \n The format will be a timed quiz related to COVID-19 " +
                 "general knowledge. \n If your state wins, you will get rewards and the state ranking will move up");
+                label.setStyle (
+                "-fx-font-family: \"arial\";"
+                + "-fx-font-size: 18px;"
+                );
         label.setWrapText(true);
         label.setMaxWidth(300);
         Button b1 = new Button("Select a state");
@@ -76,11 +80,15 @@ public class Duel {
         hBox.setAlignment(Pos.CENTER);
 
         VBox layout = new VBox(10);
+        layout.setId("pane");
         layout.getChildren().addAll(label, hBox);
         layout.setAlignment(Pos.CENTER);
+        //layout.setStyle("-fx-background-color: #89CFF0");
 
         //Display window and wait for it to be closed before returning
         Scene scene = new Scene(layout);
+        scene.getStylesheets().addAll(this.getClass().getResource(
+                "duel.css").toExternalForm());
         window.setScene(scene);
         window.showAndWait();
     }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1334.0" preserveRatio="true">
+         <image>
+            <Image url="@main_scene.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="196.0" fitWidth="825.0" layoutX="277.0" layoutY="564.0">
+         <image>
+            <Image url="@Q1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1002.0" layoutY="19.0">
+         <image>
+            <Image url="@state_ranking.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1117.0" layoutY="19.0">
+         <image>
+            <Image url="@duel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="1230.0" layoutY="19.0">
+         <image>
+            <Image url="@info_center.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="395.0" fitWidth="265.0" layoutX="62.0" layoutY="229.0">
+         <image>
+            <Image url="@npc.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="550.0" layoutX="424.0" layoutY="196.0">
+         <image>
+            <Image url="@q1-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="550.0" layoutX="424.0" layoutY="115.0">
+         <image>
+            <Image url="@q1-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="550.0" layoutX="424.0" layoutY="276.0">
+         <image>
+            <Image url="@q1-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="550.0" layoutX="424.0" layoutY="359.0">
+         <image>
+            <Image url="@q1-4.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="440.0" layoutY="120.0" mnemonicParsing="false" onAction="#toS1ButtonAction" opacity="0.0" prefHeight="55.0" prefWidth="550.0" text="Button" />
+      <Button layoutX="1125.0" layoutY="21.0" mnemonicParsing="false" onAction="#duelButtonAction" opacity="0.0" prefHeight="89.0" prefWidth="77.0" text="Button" />
+      <Button layoutX="1240.0" layoutY="28.0" mnemonicParsing="false" onAction="#infoButtonAction" opacity="0.0" prefHeight="65.0" prefWidth="65.0" text="Button" />
+   </children>
+</AnchorPane>
