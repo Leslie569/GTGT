@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -17,11 +17,11 @@
             <Image url="@sound_button.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="141.0" fitWidth="373.0" layoutX="239.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="141.0" fitWidth="373.0" layoutX="520.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@start_button.png" />
          </image>
       </ImageView>
-      <Button layoutX="206.0" layoutY="169.0" mnemonicParsing="false" onAction="#startButtonAction" opacity="0.0" prefHeight="169.0" prefWidth="417.0" textOverrun="CLIP" />
+      <Button layoutX="520.0" layoutY="550.0" mnemonicParsing="false" onAction="#startButtonAction" opacity="0.0" prefHeight="169.0" prefWidth="417.0" textOverrun="CLIP" />
    </children>
 </AnchorPane>

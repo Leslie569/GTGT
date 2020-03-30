@@ -46,8 +46,8 @@ public class checkData extends Application  {
 
         b3 = new Button();
         b3.setText("Simulation");
-        Duel duel = new Duel();
-        b3.setOnAction(e -> duel.display(primaryStage));
+        //Duel duel = new Duel();
+        //b3.setOnAction(e -> duel.display(primaryStage));
 
         HBox layout = new HBox(40);
         layout.setAlignment(Pos.CENTER);
